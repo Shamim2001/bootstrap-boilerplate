@@ -1,0 +1,61 @@
+@import url(./variables.css);
+.h-screen{
+    height: 100vh;
+}
+.w-screen{
+    width: 100vw;
+}
+.font-arapey{
+    font-family: 'Arapey';
+}
+.font-montserrat{
+    font-family: 'Montserrat';
+}
+.font-old-standard{
+    font-family: 'Old Standard TT';
+}
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    font-size: .8125em;
+    letter-spacing: .1em;
+}
+.primary-btn:hover{
+    background-color: var(--red-color);
+}
+.bg-cover{
+    background-size: cover;
+}
+.bg-center{
+    background-position: center;
+}
+.bg-grey{
+    background-color: gray;
+}
+.bg-grey-light{
+    background-color: rgb(244, 242, 242);
+}
+.bg-end{
+    background-position: bottom;
+}
+.bg-overlay{
+    background-blend-mode: overlay;
+    --bs-bg-opacity:.38;
+}
+.btn-gradient{
+    background: linear-gradient(to right, rgb(196, 181, 253), rgb(167, 139, 250))
+}
+.text-gold{
+    color: rgb(196,130,47);
+}
+.text-gold:hover{
+    color: var(--primary-color);
+}
+.opacity-90{
+    opacity: .90;
+}

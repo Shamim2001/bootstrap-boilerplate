@@ -1,0 +1,405 @@
+@import url(./variables.css);
+/* -------------------------------- Preloader ------------------------------- */
+html, body{
+    overflow: hidden;
+}
+.progress {
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.progress-bar {
+    background-color: #000;
+    height: 15px;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+.progress.active .progress-bar,
+.progress-bar.active {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+}
+
+.progress-striped .progress-bar,
+.progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+}
+
+.lovette_page_loading_area::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    background: url("../img/heart-icon.png");
+    background-size: 50px;
+    z-index: -1;
+}
+
+.lovette_page_loading_area {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999999999999;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    transition: all .4s ease;
+}
+
+.lovette_page_loading_area::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: #000;
+    opacity: .6;
+    z-index: -1;
+}
+
+
+
+.theme-3-content .btn_black:hover {
+    background: #fff;
+    color: #000;
+}
+
+.theme-3-content .btn_red:hover {
+    background: #000;
+    color: #fff;
+}
+
+.lovette_page_loading {
+    width: 45%;
+    align-self: center;
+    text-align: center;
+    background: #000;
+    padding: 15px;
+    position: relative;
+}
+
+h2.preloader_title {
+    color: #fff;
+    font-family: var(--font-montserrat);
+    font-size: 25px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.lovette_page_loading h2.preloader_title img {
+    max-width: 120px;
+}
+
+.lovette_page_loading .progress-bar.progress-bar-striped {
+    background-color: #000
+}
+
+.lovette_page_loading .progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+}
+
+.lovette_page_loading h2.preloader_title {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    padding: 30px 0;
+    line-height: 1.4;
+    
+}
+
+.nl-logo-preloader {
+    display: inline-block;
+    max-width: 150px;
+    padding-top: 30px
+}
+
+.theme-2 .nl-logo-preloader {
+    display: inline-block;
+    max-width: 100px;
+    padding-top: 80px;
+}
+
+.theme-2.lovette_page_loading h2.preloader_title {
+    margin-top: 35px;
+}
+
+.theme-3-content h2.preloader_title strong,
+.theme-2.lovette_page_loading h2.preloader_title strong,
+.lovette_page_loading h2.preloader_title strong {
+    color: #d7a100;
+    font-family: 'Capistrano BF';
+    text-transform: capitalize;
+    padding: 0px 9px;
+}
+
+.lovette_page_loading_area.theme-3 {
+    flex-direction: column;
+}
+
+
+/* 
+=======================
+Circle Preloader
+=======================
+*/
+.circle-loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 150px;
+    width: 150px;
+    margin-left: -75px;
+    margin-top: -75px;
+}
+
+.theme-3-content {
+    text-align: center;
+    color: #fff;
+    top: 120px;
+    position: relative;
+}
+
+.circle {
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    border-top: 2px solid #f0b858;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid #f0b858;
+    border-right: 2px solid transparent;
+    animation: animate 2s infinite;
+}
+
+.circle-loader img {
+    transform: scale(.6);
+    animation: animate_logo 2s infinite;
+}
+
+.circle_one {
+    left: 30px;
+    top: 30px;
+    width: 90px;
+    height: 90px;
+    border-width: 5px;
+}
+
+.circle_two {
+    left: 20px;
+    top: 20px;
+    width: 110px;
+    height: 110px;
+    animation-delay: 0.2s;
+}
+
+.circle_three {
+    left: 10px;
+    top: 10px;
+    width: 130px;
+    height: 130px;
+    animation-delay: 0.4s;
+}
+
+.circle_four {
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0.6s;
+}
+
+@keyframes animate {
+    50% {
+        transform: rotate(360deg) scale(0.8);
+    }
+}
+
+@keyframes animate_logo {
+    50% {
+        transform: rotate(360deg) scale(0.5);
+    }
+}
+
+
+
+
+
+/* Theme 1 */
+#preloader_7 {
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: pink;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    z-index: 1001;
+    left: 50%;
+    top: 50px;
+    margin-left: -100px;
+}
+
+#preloader_7:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+
+    -webkit-animation: spin 3s linear infinite;
+    /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear infinite;
+    /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#preloader_7:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+
+    -webkit-animation: spin 1.5s linear infinite;
+    /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 1.5s linear infinite;
+    /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        transform: rotate(0deg);
+        /* Firefox 16+, IE 10+, Opera */
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);
+        /* IE 9 */
+        transform: rotate(360deg);
+        /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        transform: rotate(0deg);
+        /* Firefox 16+, IE 10+, Opera */
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);
+        /* IE 9 */
+        transform: rotate(360deg);
+        /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+
+/* Responsive */
+
+@media only screen and (min-width: 1920px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1280px) {}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+@media only screen and (max-width: 767px) {
+    .lovette_page_loading {
+        width: 94%;
+    }
+
+    .nl-logo-preloader {
+        max-width: 100px;
+        padding-top: 20px;
+    }
+
+    .theme-2 .nl-logo-preloader {
+        display: inline-block;
+        max-width: 60px;
+        padding-top: 76px;
+    }
+
+    #preloader_7 {
+        width: 150px;
+        height: 150px;
+        top: 50px;
+        margin-left: -75px;
+    }
+
+    .lovette_page_loading h2.preloader_title img {
+        max-width: 60px;
+    }
+
+    .theme-2.lovette_page_loading h2.preloader_title {
+        margin-top: 45px;
+        font-size: 18px;
+    }
+
+    .lovette_page_loading h2.preloader_title {
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+    .theme-3-content {
+        top: 100px;
+    }
+
+    .theme-3-content .btn_black {
+        margin-top: 15px;
+    }
+
+    .theme-3-content h2.preloader_title {
+        font-size: 18px;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
